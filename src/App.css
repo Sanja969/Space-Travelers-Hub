@@ -3,6 +3,19 @@
   padding: 10px 40px;
 }
 
+.my-profile {
+  margin-top: 100px;
+  padding: 10px 40px;
+}
+
+.my-profile > * {
+  margin: 20px;
+}
+
+.myRocket {
+  height: 50px;
+}
+
 .rocket > img {
   width: 250px;
   height: 200px;

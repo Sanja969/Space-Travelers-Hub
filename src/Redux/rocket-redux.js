@@ -37,6 +37,7 @@ export const getRockets = () => async (dispatch) => {
     rocketName: element.rocket_name,
     description: element.description,
     image: element.flickr_images[0],
+    reserved: false,
   }));
 
   dispatch({

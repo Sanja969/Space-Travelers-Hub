@@ -3,6 +3,11 @@
   padding: 10px 40px;
 }
 
+.rocket > img {
+  width: 250px;
+  height: 200px;
+}
+
 @media (max-width: 766px) {
   .rocket {
     flex-direction: column !important;

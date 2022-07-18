@@ -8,6 +8,10 @@
   height: 200px;
 }
 
+.badge {
+  display: inline-block;
+}
+
 @media (max-width: 766px) {
   .rocket {
     flex-direction: column !important;

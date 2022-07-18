@@ -20,7 +20,7 @@ export const getRockets = () => async (dispatch) => {
     id: element.id,
     rocketName: element.rocket_name,
     description: element.description,
-    flickr_images: element.flickr_images,
+    image: element.flickr_images[0],
   }));
 
   dispatch({

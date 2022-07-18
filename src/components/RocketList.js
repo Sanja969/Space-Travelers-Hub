@@ -3,9 +3,15 @@ import React from 'react';
 import Rocket from './Rocket';
 
 const RocketList = (props) => {
-  const { rockets } = props;
+  const { rockets, reserveRocket } = props;
   return (
-    rockets.map((rocket) => <Rocket key={rocket.id} rocket={rocket} />)
+    rockets.map((rocket) => (
+      <Rocket
+        key={rocket.id}
+        rocket={rocket}
+        reserveRocket={reserveRocket}
+      />
+    ))
   );
 };
 

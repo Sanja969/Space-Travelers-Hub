@@ -1,25 +1,23 @@
+/*eslint-disable*/
+
 // Action-type
 const SET_MISSIONS = 'SET_MISSIONS ';
 
 // Action-creator
-export const setmissions = (mission) => ({
+export const Setmissions = (mission) => ({
   type: SET_MISSIONS,
   payload: mission,
 });
 
 // Reducer
-const initstate = [
-  {
-    mission_id: 1,
-    Missionname: 'Abdo',
-    description: 'kjhgfds.,mnbvcxoiuygtrfe,mnbvfdsdfghjklkjhgfdsdfgjkkjhgf',
-  },
-];
+const initstate = {
+  mission: [],
+};
 
-const missionsReducer = (state = initstate, action) => {
-  switch (action.type) {
+const missionsReducer = (state = initstate, { type, payload }) => {
+  switch (type) {
     case SET_MISSIONS:
-      return state;
+      return { ...state, mission: payload };
     default:
       return state;
   }

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getRockets, bookRocket } from '../Redux/rocket-redux';
+import { getRockets, bookRocket, cancelRocket } from '../Redux/rocket-redux';
 import RocketList from './RocketList';
 
 const Rockets = () => {
@@ -12,10 +12,15 @@ const Rockets = () => {
   }, [dispatch]);
 
   const reserveRocket = (id) => dispatch(bookRocket(id));
+  const cancelReservation = (id) => dispatch(cancelRocket(id));
 
   return (
     <div className="d-flex flex-column align-items-center rockets">
-      <RocketList rockets={rockets} reserveRocket={reserveRocket} />
+      <RocketList
+        rockets={rockets}
+        reserveRocket={reserveRocket}
+        cancelRocket={cancelReservation}
+      />
     </div>
   );
 };

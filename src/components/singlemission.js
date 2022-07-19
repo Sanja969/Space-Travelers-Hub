@@ -1,14 +1,42 @@
 import React from 'react';
-// import { useSelector } from 'react-redux';
+// /*eslint-disable*/
+import { useSelector } from 'react-redux';
 
 function Singlemission() {
-  // const mission = useSelector((state) => state.missions);
-  // const { Missionname, description } = mission[0];
+  const allmission = useSelector((state) => state.missions);
+
+  const rinderlist = allmission.map((mission) => (
+    <tbody key={mission.mission_id}>
+      <tr>
+        <th className="name ">{mission.mission_name}</th>
+        <td className="description">
+          <p className="p">{mission.description}</p>
+        </td>
+        <td className="member">NOT A MEMBER</td>
+        <td>
+          <button className="button" type="button">
+            Join mission
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  ));
+
+  // console.log(allmission);
 
   return (
     <div className="single">
-      <h1>Abdo</h1>
-      <h2>jhgfds</h2>
+      <table className="table table-bordered table-striped">
+        <thead className="thead-dark">
+          <tr>
+            <th scope="col">Mission</th>
+            <th scope="col">Description</th>
+            <th scope="col">state</th>
+            <th scope="col">Submition mission</th>
+          </tr>
+        </thead>
+        {rinderlist}
+      </table>
     </div>
   );
 }

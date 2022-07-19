@@ -12,14 +12,14 @@ const Missions = () => {
   const fetchmissions = async () => {
     const response = await axios.get('https://api.spacexdata.com/v3/missions');
     dispatch(Setmissions(response.data));
-    console.log(response.data);
+    // console.log(response.data);
   };
 
   useEffect(() => {
     fetchmissions();
   }, []);
 
-  console.log('missions :', mission);
+  // console.log('missions :', mission);
   return (
     <div className='mt-5'>
       <Singlemission />

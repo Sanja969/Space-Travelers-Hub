@@ -10,14 +10,12 @@ export const Setmissions = (mission) => ({
 });
 
 // Reducer
-const initstate = {
-  mission: [],
-};
+const initstate = [];
 
-const missionsReducer = (state = initstate, { type, payload }) => {
-  switch (type) {
+const missionsReducer = (state = initstate, action) => {
+  switch (action.type) {
     case SET_MISSIONS:
-      return { ...state, mission: payload };
+      return [...action.payload];
     default:
       return state;
   }

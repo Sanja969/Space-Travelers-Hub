@@ -50,3 +50,27 @@
   margin-top: 140px;
   margin-left: 100px;
 }
+
+.table {
+  margin-left: -5%;
+  border: 1px solid rgb(180, 180, 180);
+}
+
+.button {
+  font-size: 12px;
+  margin-top: 40%;
+  border: 1px solid rgb(63, 59, 59);
+}
+
+.member {
+  font-size: 12px;
+  width: 9%;
+}
+
+.p {
+  background-color: aliceblue;
+}
+
+.description {
+  background-color: aliceblue;
+}

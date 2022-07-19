@@ -18,3 +18,13 @@
     align-items: center;
   }
 }
+
+.blue {
+  color: black;
+  margin-left: 100px;
+}
+
+.single {
+  margin-top: 140px;
+  margin-left: 100px;
+}

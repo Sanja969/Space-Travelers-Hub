@@ -8,52 +8,55 @@ function Singlemission() {
   const allmission = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
-  const handleClick = (mission_id) => dispatch(Joinmission(mission_id));
-  const handleClick2 = (mission_id) => dispatch(leavemission(mission_id));
-
-  const rinderlist = allmission.map((mission) => (
-    <tbody key={mission.mission_id}>
-      <tr>
-        <th className='name '>{mission.mission_name}</th>
-        <td className='description'>
-          <p className='p'>{mission.description}</p>
-        </td>
-        <td className='member'>
-          {mission.website ? (
-            <p className='center gray'>NOT MEMBER</p>
-          ) : (
-            <p className='center bg-primary text-white badge my-0'>
-              Active member
-            </p>
-          )}
-        </td>
-        <td>
-          {mission.website ? (
-            <button
-              onClick={() => handleClick2(mission.mission_id)}
-              className='button'
-              type='button'
-            >
-              <p className='join both'>Join mission</p>
-            </button>
-          ) : (
-            <></>
-          )}
-          {mission.website === false ? (
-            <button
-              onClick={() => handleClick(mission.mission_id)}
-              className='button'
-              type='button'
-            >
-              <p className='acctive both'>Leave mission</p>
-            </button>
-          ) : (
-            <></>
-          )}
-        </td>
-      </tr>
-    </tbody>
-  ));
+  const Jooinmission = (mission_id) => dispatch(Joinmission(mission_id));
+  const leeavemission = (mission_id) => dispatch(leavemission(mission_id));
+  let count = 0;
+  const rinderlist = allmission.map(
+    (mission) => (
+      (count += 1),
+      (
+        <tbody
+          key={mission.mission_id}
+          className={count % 2 === 0 ? 'll' : 'bg-white'}
+        >
+          <tr>
+            <th className='name '>{mission.mission_name}</th>
+            <td className='description'>
+              <p className='p'>{mission.description}</p>
+            </td>
+            <td className='member'>
+              {!mission.reserved ? (
+                <p className='center gray'>NOT MEMBER</p>
+              ) : (
+                <p className='center bg-primary text-white badge my-0'>
+                  Active member
+                </p>
+              )}
+            </td>
+            <td>
+              {!mission.reserved ? (
+                <button
+                  onClick={() => Jooinmission(mission.mission_id)}
+                  className='button join both'
+                  type='button'
+                >
+                 Join mission
+                </button>
+              ) : (
+                <button
+                  onClick={() => leeavemission(mission.mission_id)}
+                  className='button acctive both'
+                  type='button'
+                >
+                  Leave mission
+                </button>
+              )}
+            </td>
+          </tr>
+        </tbody>
+      )
+    )
+  );
 
   // console.log(allmission);
 

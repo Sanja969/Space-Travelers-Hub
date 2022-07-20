@@ -19,7 +19,7 @@ function Singlemission() {
           <p className='p'>{mission.description}</p>
         </td>
         <td className='member'>
-          {mission.website === true ? (
+          {mission.website ? (
             <p className='center gray'>NOT MEMBER</p>
           ) : (
             <p className='center bg-primary text-white badge my-0'>

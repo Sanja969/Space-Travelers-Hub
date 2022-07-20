@@ -3,6 +3,7 @@
 // Action-type
 const SET_MISSIONS = 'SET_MISSIONS ';
 const JOIN_MISSION = 'JOIN_MISSION';
+const LEAVE_MISSION = 'LEAVE_MISSION';
 
 // Action-creator
 export const Setmissions = (mission) => ({
@@ -11,6 +12,11 @@ export const Setmissions = (mission) => ({
 });
 
 export const Joinmission = (mission_id) => ({ type: JOIN_MISSION, mission_id });
+
+export const leavemission = (mission_id) => ({
+  type: LEAVE_MISSION,
+  mission_id,
+});
 
 // Reducer
 const initstate = [];
@@ -26,6 +32,14 @@ const missionsReducer = (state = initstate, action) => {
         }
         return { ...mission, website: true };
       });
+    case LEAVE_MISSION:
+      return state.map((mission) => {
+        if (mission.mission_id !== action.mission_id) {
+          return mission;
+        }
+        return { ...mission, website: false };
+      });
+
     default:
       return state;
   }

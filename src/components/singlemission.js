@@ -1,13 +1,15 @@
-import React from 'react';
 /*eslint-disable*/
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Joinmission } from '../Redux/missions-redux';
+import { leavemission } from '../Redux/missions-redux';
 
 function Singlemission() {
   const allmission = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
   const handleClick = (mission_id) => dispatch(Joinmission(mission_id));
+  const handleClick2 = (mission_id) => dispatch(leavemission(mission_id));
 
   const rinderlist = allmission.map((mission) => (
     <tbody key={mission.mission_id}>
@@ -18,25 +20,36 @@ function Singlemission() {
         </td>
         <td className='member'>
           {mission.website === true ? (
+            <p className='center gray'>NOT MEMBER</p>
+          ) : (
             <p className='center bg-primary text-white badge my-0'>
               Active member
             </p>
-          ) : (
-            <p className='center gray'>NOT MEMBER</p>
           )}
         </td>
         <td>
-          <button
-            onClick={() => handleClick(mission.mission_id)}
-            className='button'
-            type='button'
-          >
-            {mission.website === true ? (
-              <p className='active both'>Leave mission</p>
-            ) : (
+          {mission.website ? (
+            <button
+              onClick={() => handleClick2(mission.mission_id)}
+              className='button'
+              type='button'
+            >
               <p className='join both'>Join mission</p>
-            )}
-          </button>
+            </button>
+          ) : (
+            <></>
+          )}
+          {mission.website === false ? (
+            <button
+              onClick={() => handleClick(mission.mission_id)}
+              className='button'
+              type='button'
+            >
+              <p className='acctive both'>Leave mission</p>
+            </button>
+          ) : (
+            <></>
+          )}
         </td>
       </tr>
     </tbody>

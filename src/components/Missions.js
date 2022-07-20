@@ -1,4 +1,4 @@
-// /*eslint-disable*/
+/*eslint-disable*/
 
 import React, { useEffect } from 'react';
 import axios from 'axios';
@@ -20,9 +20,9 @@ const Missions = () => {
     fetchmissions();
   }, []);
 
-  console.log('missions :', mission);
+  // console.log('missions :', mission);
   return (
-    <div className="mt-5">
+    <div className='mt-5'>
       <Singlemission />
     </div>
   );

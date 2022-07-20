@@ -5,7 +5,6 @@ const MyProfile = () => (
   <div className="d-flex my-profile w-100 justify-content-around">
     <MyMissions className="" />
     <MyRockets className="" />
-
   </div>
 );
 

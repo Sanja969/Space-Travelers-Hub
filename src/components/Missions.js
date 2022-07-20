@@ -1,4 +1,4 @@
-/*eslint-disable*/
+// /*eslint-disable*/
 
 import React, { useEffect } from 'react';
 import axios from 'axios';
@@ -11,6 +11,7 @@ const Missions = () => {
   const dispatch = useDispatch();
   const fetchmissions = async () => {
     const response = await axios.get('https://api.spacexdata.com/v3/missions');
+
     dispatch(Setmissions(response.data));
     // console.log(response.data);
   };
@@ -19,9 +20,9 @@ const Missions = () => {
     fetchmissions();
   }, []);
 
-  // console.log('missions :', mission);
+  console.log('missions :', mission);
   return (
-    <div className='mt-5'>
+    <div className="mt-5">
       <Singlemission />
     </div>
   );

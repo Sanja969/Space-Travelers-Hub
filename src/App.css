@@ -58,13 +58,9 @@
 
 .button {
   font-size: 12px;
-  margin-top: 40%;
-  border: 1px solid rgb(63, 59, 59);
-}
 
-.member {
-  font-size: 12px;
-  width: 9%;
+  /* border: 1px solid rgb(63, 59, 59); */
+  border: none;
 }
 
 .p {
@@ -73,4 +69,30 @@
 
 .description {
   background-color: aliceblue;
+}
+
+.gray {
+  background-color: gray;
+  color: #fff;
+  font-size: 10px;
+  border-radius: 10%;
+  text-align: center;
+}
+
+.active {
+  font-size: 10px;
+  color: rgb(218, 54, 54);
+  border: 1px solid rgb(218, 54, 54);
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.join {
+  border: 1px solid rgb(63, 59, 59);
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.member {
+  width: 10%;
 }

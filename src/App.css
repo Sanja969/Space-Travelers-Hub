@@ -58,17 +58,7 @@
 
 .button {
   font-size: 12px;
-
-  /* border: 1px solid rgb(63, 59, 59); */
   border: none;
-}
-
-.p {
-  background-color: aliceblue;
-}
-
-.description {
-  background-color: aliceblue;
 }
 
 .gray {
@@ -79,7 +69,7 @@
   text-align: center;
 }
 
-.active {
+.acctive {
   font-size: 10px;
   color: rgb(218, 54, 54);
   border: 1px solid rgb(218, 54, 54);
@@ -95,4 +85,8 @@
 
 .member {
   width: 10%;
+}
+
+.ll {
+  background-color: rgb(190, 182, 182);
 }

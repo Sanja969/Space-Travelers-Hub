@@ -37,7 +37,7 @@ function Singlemission() {
               {!mission.reserved ? (
                 <button
                   onClick={() => Jooinmission(mission.mission_id)}
-                  className='button join both'
+                  className='button join '
                   type='button'
                 >
                  Join mission
@@ -45,7 +45,7 @@ function Singlemission() {
               ) : (
                 <button
                   onClick={() => leeavemission(mission.mission_id)}
-                  className='button acctive both'
+                  className='button acctive '
                   type='button'
                 >
                   Leave mission

@@ -32,7 +32,7 @@ function Singlemission() {
             type='button'
           >
             {mission.website === true ? (
-              <p className='active both'>Active member</p>
+              <p className='active both'>Leave mission</p>
             ) : (
               <p className='join both'>Join mission</p>
             )}

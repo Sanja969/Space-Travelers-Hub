@@ -83,9 +83,16 @@
   font-size: 10px;
   color: rgb(218, 54, 54);
   border: 1px solid rgb(218, 54, 54);
+  padding: 2px;
+  border-radius: 4px;
 }
 
 .join {
   border: 1px solid rgb(63, 59, 59);
   padding: 2px;
+  border-radius: 4px;
+}
+
+.member {
+  width: 10%;
 }

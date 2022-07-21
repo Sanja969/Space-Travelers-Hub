@@ -24,20 +24,20 @@ function Singlemission() {
             <td className='description'>
               <p className='p'>{mission.description}</p>
             </td>
-            <td className='member'>
+            <td className='member column-end text-center'>
               {!mission.reserved ? (
-                <p className='center gray'>NOT MEMBER</p>
+                <p className='bg-secondary text-white badge my-0'>NOT A MEMBER</p>
               ) : (
-                <p className='center bg-primary text-white badge my-0'>
+                <p className='bg-primary text-white badge my-0'>
                   Active member
                 </p>
               )}
             </td>
-            <td>
+            <td className="column-end px-4">
               {!mission.reserved ? (
                 <button
                   onClick={() => Jooinmission(mission.mission_id)}
-                  className='button join '
+                  className='button join p-1'
                   type='button'
                 >
                  Join mission
@@ -45,7 +45,7 @@ function Singlemission() {
               ) : (
                 <button
                   onClick={() => leeavemission(mission.mission_id)}
-                  className='button acctive '
+                  className='button leave p-1'
                   type='button'
                 >
                   Leave mission
@@ -61,14 +61,14 @@ function Singlemission() {
   // console.log(allmission);
 
   return (
-    <div className='single'>
-      <table className='table table-bordered table-striped'>
+    <div className='single d-flex justify-content-center px-3 py-5 mt-5'>
+      <table className='table table-bordered table-striped p-0 m-0'>
         <thead className='thead-dark'>
           <tr>
             <th scope='col'>Mission</th>
             <th scope='col'>Description</th>
-            <th scope='col'>state</th>
-            <th scope='col'>Submition mission</th>
+            <th scope='col'>Status</th>
+            <th scope='col'></th>
           </tr>
         </thead>
         {rinderlist}

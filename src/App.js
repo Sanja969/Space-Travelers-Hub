@@ -1,11 +1,22 @@
 import './App.css';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import NavBar from './components/Navbar';
 import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 import MyProfile from './components/MyProfile';
+import { Setmissions } from './Redux/missions-redux';
+import { getRockets } from './Redux/rocket-redux';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(Setmissions());
+    dispatch(getRockets());
+  }, []);
+
   return (
     <BrowserRouter>
       <NavBar />

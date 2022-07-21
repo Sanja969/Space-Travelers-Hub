@@ -12,7 +12,6 @@ const Missions = () => {
     dispatch(Setmissions());
   }, []);
 
-  // console.log('missions :', mission);
   return (
     <div className='mt-5'>
       <Singlemission />

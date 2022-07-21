@@ -36,7 +36,7 @@ or
 
 ### Clone it in your local machine using GIT
 to get a local copy , clone the repository using git clone
-[Space-Travelers-Hub](git@github.com:Sanja969/Space-Travelers-Hub.git)
+[Space-Travelers-Hub](https://github.com/Sanja969/Space-Travelers-Hub)
 
 After you clone it run  the following commands
 

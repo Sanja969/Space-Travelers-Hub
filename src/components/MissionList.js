@@ -24,7 +24,7 @@ function Singlemission() {
             <td className='description'>
               <p className='p'>{mission.description}</p>
             </td>
-            <td className='member column-end text-center'>
+            <td className='column-end text-center'>
               {!mission.reserved ? (
                 <p className='bg-secondary text-white badge my-0'>NOT A MEMBER</p>
               ) : (
@@ -61,9 +61,9 @@ function Singlemission() {
   // console.log(allmission);
 
   return (
-    <div className='single d-flex justify-content-center px-3 py-5 mt-5'>
+    <div className='d-flex justify-content-center px-3 py-5 mt-5'>
       <table className='table table-bordered table-striped p-0 m-0'>
-        <thead className='thead-dark'>
+        <thead className='thred'>
           <tr>
             <th scope='col'>Mission</th>
             <th scope='col'>Description</th>

@@ -6,7 +6,7 @@ function Mymissions() {
 
   return (
     <div className="myRockets w-50">
-      <h3>My Rockets</h3>
+      <h3>My Missions</h3>
       <ul className="ps-0">
         {allmission
           .filter((missions) => missions.reserved)

@@ -1,10 +1,10 @@
-## Project_name 
+## Space-Travelers-Hub
 
-Space-Travelers-Hub
+Space Xplore is a React-Redux application consists of Rockets, Missions, and the My Profile section. it that allows you to:
 
-## Description
-
-This is a web  that provides Rocjets travels and Missions of Rockets. It allows users to book rockets and join selected space missions. Built with the SpaceX API.
+- See different Rockets and reserve any one.
+- See different Missions and Join any one.
+- Display your reserved rockets and joined missions in profile section.
 
 # Screenshots
 

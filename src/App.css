@@ -1,0 +1,74 @@
+.rockets {
+  margin-top: 100px;
+  padding: 10px 40px;
+}
+
+.my-profile {
+  margin-top: 100px;
+  padding: 10px 40px;
+}
+
+.my-profile > * {
+  margin: 20px;
+}
+
+.myRocket {
+  height: 50px;
+}
+
+.rocket > img {
+  width: 250px;
+  height: 200px;
+}
+
+.badge {
+  display: inline-block;
+}
+
+.button {
+  font-size: 12px;
+  background-color: inherit;
+  width: 100px;
+}
+
+.leave {
+  color: rgb(218, 54, 54);
+  border: 1px solid rgb(218, 54, 54);
+  border-radius: 1px;
+}
+
+.join {
+  border: 1px solid rgb(63, 59, 59);
+  padding: 2px;
+  border-radius: 1px;
+}
+
+.ll {
+  background-color: rgb(237, 228, 228);
+}
+
+tbody,
+tr {
+  border: none !important;
+  border: 1px solid rgb(206, 199, 199) !important;
+}
+
+.column-end {
+  vertical-align: middle;
+}
+
+@media (max-width: 766px) {
+  .rocket {
+    flex-direction: column !important;
+    align-items: center;
+    border: 1px solid black;
+    padding: 20px;
+  }
+
+  .rocket > div {
+    margin-left: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

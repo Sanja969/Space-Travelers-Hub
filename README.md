@@ -6,6 +6,14 @@ Space Xplore is a React-Redux application consists of Rockets, Missions, and the
 - See different Missions and Join any one.
 - Display your reserved rockets and joined missions in profile section.
 
+# Live Demo:
+
+https://space-travelers-hub-x.netlify.app/
+
+# Technologies:
+
+React, Redux, Bootstap, CSS, Jest
+
 # Screenshots
 
 
